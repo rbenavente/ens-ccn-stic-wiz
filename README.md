@@ -20,6 +20,7 @@ Mas información sobre el uso del provider de wiz en https://docs.wiz.io/wiz-doc
 
 
 Para desplegar los controles: 
+
 terraform init
 terraform plan
 terraform apply 
