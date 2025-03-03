@@ -17,3 +17,13 @@ provider "wiz" {
 
 
 Mas información sobre el uso del provider de wiz en https://docs.wiz.io/wiz-docs/docs/wiz-terraform-provider
+
+
+Para desplegar los controles: 
+terraform init
+terraform plan
+terraform apply 
+
+
+Para eliminarlos:
+terraform destroy
