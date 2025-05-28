@@ -4,7 +4,8 @@ Para actualizar estos controles se utiliza Terraform y a continuación se indica
 
 
 **Pre-requisito**
-	•	Asegúrate de tener instalado Terraform: terraform -v
+
+Asegúrate de tener instalado Terraform: terraform -v
 
 **1. Clonar el Repositorio de GitHub**
  
@@ -21,18 +22,19 @@ Ve a la carpeta del marco que quieras cargar, por ejemplo para  los controles de
 
 Para esto necesitas tener permisos de administrador en tu cuenta de Wiz. Los pasos típicos:
 
-Opción 1: Desde la UI de Wiz
-	1.	Inicia sesión en el portal de Wiz: https://app.wiz.io
-	2.	Ve a Settings > Service Accounts
-	3.	Haz clic en Create Service Account
-	4.	Asigna un nombre, y selecciona los permisos necesarios:
-      Type: Custom Integration (GraphQL API)
-      En el API Scope seleccionar:
-       Controls: todos los permisos
-       Cloud Configuration:  todos los permisos
-       Security Frameworks: todos los permisos
+Opción: Desde la UI de Wiz
+	1.Inicia sesión en el portal de Wiz: https://app.wiz.io
+	2.Ve a Settings > Service Accounts
+	3.Haz clic en Create Service Account
+	4.Asigna un nombre, y selecciona los permisos necesarios:
+	      Type: Custom Integration (GraphQL API)
+	      En el API Scope seleccionar:
+		      Controls: todos los permisos
+		      Cloud Configuration:  todos los permisos
+		      Security Frameworks: todos los permisos
     
-	5.	Copia el Client ID y Client Secret — los usarás con Terraform
+	5.Copia el Client ID y Client Secret — los usarás con Terraform
+
 
 **3. Configurar Credenciales de Wiz en Terraform**
 
@@ -42,6 +44,7 @@ Terraform usará un provider específico para Wiz. Asegúrate de que en el repo 
       client_id = "ixxxxx
       secret = "xxxxx”
     }
+
 
 **4. Ejecutar Terraform**
 
