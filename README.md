@@ -12,9 +12,11 @@ Asegúrate de tener instalado Terraform: terraform -v
   Abre una terminal y ejecuta:
  
   git clone https://github.com/rbenavente/ens-ccn-stic-wiz.git
+  
   cd ens-ccn-stic-wiz
 
 Ve a la carpeta del marco que quieras cargar, por ejemplo para  los controles de Azure: 
+
   cd ens-ccn-stic-wiz 
 
 
@@ -23,9 +25,13 @@ Ve a la carpeta del marco que quieras cargar, por ejemplo para  los controles de
 Para esto necesitas tener permisos de administrador en tu cuenta de Wiz. Los pasos típicos:
 
 Opción: Desde la UI de Wiz
+
 	1.Inicia sesión en el portal de Wiz: https://app.wiz.io
+ 
 	2.Ve a Settings > Service Accounts
+ 
 	3.Haz clic en Create Service Account
+ 
 	4.Asigna un nombre, y selecciona los permisos necesarios:
 	      Type: Custom Integration (GraphQL API)
 	      En el API Scope seleccionar:
