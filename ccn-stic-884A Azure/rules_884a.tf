@@ -13,7 +13,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon1r1" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "4e6ff53b-c48f-4559-96f7-f7652e848499"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r2" {
   description              = "This rule checks whether Azure AKS cluster monitoring has been configured.  This rule fails if the Azure AKS cluster does not have monitoring enabled through Azure Monitor Logs.  \nAzure Monitor Logs is a feature that allows users to gain comprehensive insights into the performance and health of their AKS clusters. By not enabling Azure Monitor Logs, users miss out on critical operational visibility required for troubleshooting and tuning purposes. Therefore, it is recommended to enable Azure Monitor Logs for AKS clusters for improved observability and management."
   enabled                  = true
@@ -33,7 +32,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r2" {
   }
 }
 
-# __generated__ by Terraform from "87e4285b-0a91-4a46-839a-db2e10b2b563"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opexp8r2" {
   description              = "This rule checks if the Log Profile sends logs for all activities.  \nThis rule fails if the `logProfileResource.categories` does not contain all of the categories on the `allActivities` list.  \nLog Profiles are a legacy method for sending activity logs to Azure storage or Event Hubs, allowing monitoring events and handling incidents. Configuring your account Log Profile to collect logs for 'Write', 'Delete', and 'Action' event categories ensures that all the control and management activities performed on your subscription are exported.  \nIt is recommended to enable logs for all activities in order to create activity trails for investigation purposes if a security incident occurs or your network is compromised."
   enabled                  = true
@@ -53,7 +52,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opexp8r2" {
   }
 }
 
-# __generated__ by Terraform from "c50167b1-fffd-4b3e-9485-6329cfa1ab90"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mps4r1" {
   description              = "This rule checks if the Virtual Network is protected by Azure DDoS Protection Standard.    \nThis rule fails if `enableDdosProtection` is set to `false` or doesn't exist, or if `ddosProtectionPlan.id` is set to `false` or doesn't exist.  \nEnable Azure DDoS Protection Standard to protect your public IP resources in the virtual network from distributed denial of service (DDoS) attacks.  \nDDoS attacks exhaust an application's resources and make the application unavailable to legitimate users.  \nIt is recommended to enable DDoS protection with a DDoS protection plan on the Virtual Network (VNet)."
   enabled                  = true
@@ -73,7 +71,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mps4r1" {
   }
 }
 
-# __generated__ by Terraform from "fdb0115d-6c21-43e4-8c50-7c84b439890b"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r4" {
   description              = "This rule checks whether the Microsoft Defender for Cloud Defender plan is set to `On` for all supported services.  \nThis rule fails if any of the `Pricings.properties.pricingTier` fields are not set to `Standard`, unless it's a deprecated plan (see the rule logic to view the list of deprecated Defender plans).  \nMicrosoft Defender provides advanced security capabilities like threat intelligence, anomaly detection, and behavior analytics.  \nIt is recommended to enable Microsoft Defender for all Azure-supported services."
   enabled                  = true
@@ -98,7 +95,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r4" {
   }
 }
 
-# __generated__ by Terraform from "f60fd8ac-5373-4514-9727-4ca1938551ba"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r3" {
   description              = "Subscription Activity Logs are platform logs that provide insight into subscription-level events. \nThese logs contain information about operations on each resource in your subscription in addition to updates on Service Health events.\n\n>**Note**  \n>This rule should always pass on every Subscription since the logs are enabled by default and can't be disabled."
   enabled                  = true
@@ -113,7 +109,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r3" {
   target_native_types      = ["Microsoft.Subscription"]
 }
 
-# __generated__ by Terraform from "f713df96-c6db-4eec-b55b-a69ee75e3b72"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom2r1" {
   description              = "This rule checks if the Virtual Network contains a Peering that is disconnected.  \nThis rule fails if `peeringState` exists and is set to `Disconnected`.  \nVirtual network peering enables you to connect two Azure virtual networks so that the resources in these networks are directly connected. Typically, the disconnection happens when a peering configuration is deleted on one virtual network, and the other virtual network reports the peering status as disconnected."
   enabled                  = true
@@ -128,7 +123,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom2r1" {
   target_native_types      = ["Microsoft.Network/virtualNetworks"]
 }
 
-# __generated__ by Terraform from "56d4b85d-b01f-40ef-8ce4-2c12934e957c"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r3" {
   description              = "This rule checks whether the Network Security Group UDP access from the internet is restricted.  \nThis rule fails if the Network Security Group allows inbound traffic from the internet using the UDP protocol.  \nRestricting access from the internet reduces susceptibility to security risks such as DDoS attacks and avoids data exposure.  \nYou should ensure UDP access is restricted and only allowed from specific sources."
   enabled                  = true
@@ -148,7 +142,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r3" {
   }
 }
 
-# __generated__ by Terraform from "260aa654-3850-4d91-88d4-9661986e230d"
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r4" {
   description              = "This rule checks whether the Conditional Access Policy requires MFA for all users.  \nThis rule fails if the policy has all of the following:\n* `applications.includeApplications` contains `All`\n* `users.includeUsers` contains `All`\n* `builtInControls` contains `mfa` or `authenticationStrength.requirementsSatisfied` contains `mfa`\n* `state` is `enabled`\n\n>**Note**  \nThis rule does not indicate a misconfiguration and is used as part of Control `wc-id-1232`."
   enabled                  = true
@@ -163,7 +156,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r4" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "02555cd3-6bed-4498-97ce-9642145c1922"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r1" {
   description              = "This rule checks whether the private endpoint that connects to Recovery Services vaults for backup is configured with a Private DNS Zone.  \nThis rule fails if the `groupIds` field of the private links service connections is set to `AzureBackup`, if the resource type is set to `Microsoft.RecoveryServices`, if the sub-resource type is set to `vaults`, and if the `customDnsConfigs` field has an `fqdn` field.  \nPrivate DNS records allow private connections to private endpoints. Private endpoint connections allow secure communication by enabling private connectivity without a need for public IP addresses in the source or destination."
   enabled                  = true
@@ -178,7 +170,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r1" {
   target_native_types      = ["Microsoft.Network/privateEndpoints"]
 }
 
-# __generated__ by Terraform from "b86ff7f6-1ab7-4fd4-b269-f94228a1e5b6"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r8" {
   description              = "This rule checks whether the Web App has HTTP logging enabled.\n\nHTTP logging, also known as web server logging, can be enabled via the App Service Logs, or by configuring a Diagnostic setting that sends and stores the HTTP logs.\n\nThis rule fails unless any one of the following occurs:\n\n* `properties.siteConfig.httpLoggingEnabled` is set to `true`\n* `DiagnosticLogsConfiguration.properties.httpLogs.enabled` is set to `true`\n* `DiagnosticSettingsResources.properties.logs.category = AppServiceHTTPLogs` has `enabled` set to `true`\n\nWhen HTTP logging is enabled, the web server logs HTTP request and response information, providing valuable insights into how your application is performing and interacting with clients.\nThese logs help in tracking and understanding details about incoming requests and outgoing responses, including request methods, URLs, status codes, headers, and more. This information can be crucial for identifying issues, such as misconfigured routes, failed requests, or unexpected behavior.\n\nIt is recommended to enable HTTP logging to effectively manage, troubleshoot, and optimize your web application as well as investigate the logs for any malicious activity.\n\n>**Note**  \n>This rule only assesses Web Apps. Other App Services are skipped."
   enabled                  = true
@@ -198,7 +189,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r8" {
   }
 }
 
-# __generated__ by Terraform from "c09c1d63-0e61-43e8-bc23-0531da56e9f6"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r2" {
   description              = "This rule checks whether the Network Security Group flow logs are configured.  \nThis rule fails if `FlowLogs` is `null`.  \nNetwork Security Group flow logs are a feature of Network Watcher that allows you to view log information about ingress and egress IP traffic through a Network Security Group.  \nLogs help detect and prevent future occurrences of things such as hacking, system failures, outages, or corruption of information."
   enabled                  = true
@@ -218,7 +208,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r2" {
   }
 }
 
-# __generated__ by Terraform from "f88c0c51-12b6-4eeb-98bf-fc6a4fe97ecd"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r5" {
   description              = "This rule checks whether the Storage logging is enabled for `Table` service for read, write, and delete requests.  \nThis rule fails if the Storage Account is not configured to log at least one type of request (`Delete`, `Read`, or `Write`).  \nThis rule checks both storage logging types (Classic and Azure Monitor).  \nThis rule skips irrelevant storage account types.  \nThe Azure Queue Storage service stores messages that can be read by anyone with access to the storage account. \nStorage Logging stores server-side recording details in the storage account for both successful and failed requests. The logs hold the details of `Read`, `Write`, and `Delete` operations against the queues."
   enabled                  = true
@@ -238,7 +228,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r5" {
   }
 }
 
-# __generated__ by Terraform from "06537292-130c-41d6-a3f4-b3d2298dd035"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc2r4" {
   description              = "This rule checks if there are any Access Reviews, which indicates PIM is in use"
   enabled                  = true
@@ -253,7 +243,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc2r4" {
   target_native_types      = ["Microsoft.AzureActiveDirectory/tenants"]
 }
 
-# __generated__ by Terraform from "46785512-f9c2-4abd-8466-cc0e38f079eb"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r3" {
   description              = "This rule checks whether the Network Security Group flow logs are enabled.  \nThis rule fails if the `enabled` field is not set to `true`.  \nNetwork Security Group flow logs are a feature of Network Watcher that allows you to view log information about ingress and egress IP traffic through a Network Security Group. \nLogs help detect and prevent future occurrences of things such as hacking, system failures, outages, or corruption of information."
   enabled                  = true
@@ -273,7 +263,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r3" {
   }
 }
 
-# __generated__ by Terraform from "c31c0c26-dc24-41e2-b360-2f63031eb6c8"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r2" {
   description              = "This rule checks whether the Network Security Group allows SSH access (TCP - port 22).  \nThis rule fails if the Network Security Group allows inbound access from 0.0.0.0/0 over TCP port 22.  \nAllowing unrestricted inbound access can increase the risk of malicious activities such as brute-force and denial of service attacks.  \nYou should ensure access is restricted and only allowed from specific sources, especially over protocols with high risk such as SSH."
   enabled                  = true
@@ -298,7 +288,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r2" {
   }
 }
 
-# __generated__ by Terraform from "3e406e65-c654-4e2a-ba59-0786738ab6bf"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r3" {
   description              = "This rule checks whether the Conditional Access Policy requires MFA for administrators.  \nThis rule fails if the policy has all of the following:\n* `users.includeRoles` contains all the Microsoft Entra ID (AAD) administrator role IDs (as listed in the Rego code) OR if `users.includeUsers` contains `All`\n* `applications.includeApplications` contains `All`\n* `builtInControls` contains `mfa` or `authenticationStrength.requirementsSatisfied` contains `mfa`\n* `state` is `enabled`\n\n>**Note**  \n>* This rule does not indicate a misconfiguration and is used as part of Control `wc-id-1235`.\n>* The full list of Microsoft Entra ID built-in roles and their IDs can be found [here](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference)."
   enabled                  = true
@@ -313,7 +303,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r3" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "b468ce14-a0a2-4e26-9766-e0ca0807e571"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r1" {
   description              = "This rule checks if the Microsoft Entra ID (AAD) User is registered for MFA.  \nThis rule skips users where `accountEnabled` is `false`, and fails if `isMfaRegistered` is set to `false`.  \nMulti-factor authentication (MFA) adds an extra layer of protection on top of your user name and password. MFA provides increased security for your Azure account settings and resources.  \nIt is recommended to enforce Microsoft Entra ID user MFA via conditional access policies.\n>**Note**  \n>See [Control](https://app.wiz.io/issues#~(filters~(status~(equals~(~'OPEN~'IN_PROGRESS))~sourceRule~(equals~(~'wc-id-1232)))~groupBy~'none)) `wc-id-1232` to check which Azure Tenants don't have an active conditional access policy that requires MFA for all users.\n"
   enabled                  = true
@@ -328,7 +318,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r1" {
   target_native_types      = ["Microsoft.AzureActiveDirectory/User"]
 }
 
-# __generated__ by Terraform from "90d46890-b6ff-4c72-8b48-be8a6580241c"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r6" {
   description              = "This rule checks whether the Storage logging is enabled for `Blob` service for read, write, and delete requests.  \nThis rule fails if the Storage Account is not configured to log at least one type of request (`Delete`, `Read`, or `Write`).  \nThis rule checks both storage logging types (Classic and Azure Monitor).  \nThis rule skips irrelevant storage account types.  \nThe Azure Queue Storage service stores messages that can be read by anyone with access to the storage account. \nStorage Logging stores server-side recording details in the storage account for both successful and failed requests. The logs hold the details of `Read`, `Write`, and `Delete` operations against the queues."
   enabled                  = true
@@ -348,7 +338,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r6" {
   }
 }
 
-# __generated__ by Terraform from "6c340237-554b-4a57-8e55-c0cf7f10a5d2"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r3" {
   description              = "This rule checks whether the Azure Backup Vault soft delete option is enabled.  \nThis rule fails if the field `SoftDeleteSettings.state` is not set to `on` or `alwayson`.  \nSoft delete provides a layer of defense against accidental or intentional data deletion, by retaining deleted data for a specified period of time. This feature is especially critical in the event of a cyberattack, where hackers may attempt to delete or corrupt data to cause damage or demand a ransom.  \nSoft delete ensures that important data is not lost forever and can be easily recovered, reducing the impact of such attacks."
   enabled                  = true
@@ -363,7 +353,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r3" {
   target_native_types      = ["Microsoft.DataProtection/backupVaults"]
 }
 
-# __generated__ by Terraform from "6aaac733-2795-49e4-8aef-6485c30272e0"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opexp11r1" {
   description              = "This rule checks whether the Key Vault is using Role-Based Access Control (RBAC) for authorization.  \nThis rule fails if the `enableRbacAuthorization` property is not set to `true`.  \nAzure Key Vault supports two types of authorization: Azure Active Directory (Azure AD) RBAC and Key Vault access policies. Azure AD RBAC is the recommended authorization method as it provides superior security and ease of use over access policies.  \nUsing RBAC allows for more granular control over access to secrets, keys, and certificates stored in a key vault. It also integrates better with other Azure services and provides a consistent authorization model across Azure resources.  \nIt is recommended to use RBAC authorization for your Key Vaults to improve security and simplify access management."
   enabled                  = true
@@ -383,7 +373,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opexp11r1" {
   }
 }
 
-# __generated__ by Terraform from "112aa076-4e69-4e8e-9e2a-4c307057961f"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc5r1" {
   description              = "This rule checks if the Microsoft Entra ID (AAD) guest User is registered for MFA.  \nThis rule skips no guest users and fails if `isMfaRegistered` is set to `false`.  \nMulti-factor authentication (MFA) adds an extra layer of protection on top of your user name and password. MFA provides increased security for your Azure account settings and resources.  \nIt is recommended to enforce Microsoft Entra ID user MFA via conditional access policies.\n>**Note**  \n>See [Control](https://app.wiz.io/issues#~(filters~(status~(equals~(~'OPEN~'IN_PROGRESS))~sourceRule~(equals~(~'wc-id-1232)))~groupBy~'none)) `wc-id-1232` to check which Azure Tenants don't have an active conditional access policy that requires MFA for all users.\n"
   enabled                  = true
@@ -398,7 +388,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc5r1" {
   target_native_types      = ["Microsoft.AzureActiveDirectory/User"]
 }
 
-# __generated__ by Terraform from "a505e96c-46d6-413d-bca3-d9fe4e07875c"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r7" {
   description              = "This rule checks whether the Storage logging is enabled for `Queue` service for read, write, and delete requests.  \nThis rule fails if the Storage Account is not configured to log at least one type of request (`Delete`, `Read`, or `Write`).  \nThis rule checks both storage logging types (Classic and Azure Monitor).  \nThis rule skips irrelevant storage account types.  \nThe Azure Queue Storage service stores messages that can be read by anyone with access to the storage account. \nStorage Logging stores server-side recording details in the storage account for both successful and failed requests. The logs hold the details of `Read`, `Write`, and `Delete` operations against the queues."
   enabled                  = true
@@ -423,7 +413,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r7" {
   }
 }
 
-# __generated__ by Terraform from "2ce49437-0647-4c45-8f46-a76d0aa149eb"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r1" {
   description              = "This rule checks whether Azure Network Watcher is disabled.  \nThis rule fails if `NetworkWatchers` is set to null.  \n>**Note**  \nThis rule is informational. It is used for the control `wc-id-1131`, and does not indicate a misconfiguration."
   enabled                  = true
@@ -454,7 +444,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon3r1" {
   }
 }
 
-# __generated__ by Terraform from "c1d810fa-3fc1-4ebb-8d0e-9d75110f0d21"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r9" {
   description              = "This rule checks whether Cosmos DB has control plane requests logging enabled.  \nThis rule fails if there are no diagnostic settings configured for the Cosmos DB account, or if control plane requests logging is not enabled.  \nEnabling logging for control plane requests in Cosmos DB is crucial for monitoring and auditing administrative operations. It helps in tracking changes and ensuring the security and compliance of your Cosmos DB environment.  \nIt is recommended to enable control plane requests logging to maintain a secure and compliant database environment."
   enabled                  = true
@@ -469,7 +459,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r9" {
   target_native_types      = ["Microsoft.DocumentDB/databaseAccounts"]
 }
 
-# __generated__ by Terraform from "86c7c850-05c4-4f83-9de8-4c1199a0ba04"
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc2r2" {
   description              = "This rule checks whether the Conditional Access Policy blocks access by location.  \nThis rule fails if the policy has all of the following:  \n* `applications.includeApplications` contains `All`  \n* `users.includeUsers` contains `All`  \n* `locations.includeLocations` is not empty  \n* `grantControls.builtInControls` contains `block`  \n* `state` is `enabled`  \n\n>**Note**  \nThis rule does not indicate a misconfiguration and is used as part of Control `wc-id-1238`."
   enabled                  = true
@@ -484,7 +473,7 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc2r2" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "57c9d6a2-aa2d-4372-8396-9997cc31371b"
+
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r10" {
   description              = "This rule checks if Audit Event logging for Key Vault instances is enabled.  \nThis rule fails when a Key Vault's `DiagnosticSettingsResources` does not contain a diagnostic setting that sends logs to a Storage Account where `properties.logs.category = AuditEvent` and `properties.logs.enabled = true` and `properties.logs.retentionPolicy.days` is at least **180** days.  \nMonitoring how and when your Azure Key Vaults are accessed, and by whom, enables an audit trail of interactions with private information, encryption keys, and certificates managed by the Azure Key Vault service. \nIt is recommended to enable AuditEvent logging for key vault instances for at least 180 days (the maximum amount of retention days is 365) to ensure interactions with key vaults are logged and available.  \n>**Note**  \nAudit Event retention is only relevant when archiving logs to a **Storage Account**."
   enabled                  = true
@@ -504,7 +493,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r10" {
   }
 }
 
-# __generated__ by Terraform from "e2db3116-0b07-4b19-ade8-8edfc516451c"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon1r2" {
   description              = "This rule checks whether the Conditional Access Policy requires MFA for all users.  \nThis rule fails if the policy has all of the following:\n* `applications.includeApplications` contains `All`\n* `users.includeUsers` contains `All`\n* `userRiskLevels` contains `high`\n* `builtInControls` contains `passwordChange`\n* `state` is `enabled`\n\n>**Note**  \nThis rule does not indicate a misconfiguration and is used as part of Control `wc-id-1236`."
   enabled                  = true
@@ -519,7 +507,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon1r2" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "e8e11135-8bec-46fd-b456-877770775772"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo2r1" {
   description              = "Azure VM should be tagged with owner details for governance purposes"
   enabled                  = true
@@ -534,7 +521,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo2r1" {
   target_native_types      = ["Microsoft.Compute/virtualMachines"]
 }
 
-# __generated__ by Terraform from "d972282d-f09b-46e7-b8d8-1d8d48daca5a"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r1" {
   description              = "This rule checks whether the Network Security Group allows RDP access (TCP - port 3389).  \nThis rule fails if the Network Security Group allows inbound access from 0.0.0.0/0 over TCP port 3389.  \nAllowing unrestricted inbound access can increase the risk of malicious activities such as brute-force and denial of service attacks.  \nYou should ensure access is restricted and only allowed from specific sources, especially over protocols with high risk such as RDP."
   enabled                  = true
@@ -559,7 +545,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpcom1r1" {
   }
 }
 
-# __generated__ by Terraform from "19df3283-cb81-446e-bea4-bd5987572efa"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r4" {
   description              = "This rule checks whether Key Vault resource logs are enabled.  \nThis rule fails if the Diagnostic Settings are configured as one of the following:  \n* At least one of the log categories is not enabled.\n* Category Groups `allLogs` or `audit` are disabled or do not have a compliant retention policy.\n* Retention policy days is not configured to `365` or `0`.\n\nKey Vault resource logs can be used to identify and diagnose issues, track changes, and improve security and compliance. In addition, resource logs can be integrated with various log management and monitoring tools to provide centralized log management and analysis, making it easier to identify patterns, troubleshoot issues, and make data-driven decisions for investigation purposes when a security incident occurs or when your network is compromised.  \nIt is recommended to enable all logging types on the Key Vault."
   enabled                  = true
@@ -574,7 +559,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r4" {
   target_native_types      = ["Microsoft.KeyVault/vaults"]
 }
 
-# __generated__ by Terraform from "f40a4158-82e3-4cd9-9a10-546ade66b2ab"
 resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r2" {
   description              = "This rule checks whether the Conditional Access Policy requires MFA for Azure management.  \nThis rule fails if the policy has all of the following:\n* `applications.includeApplications` contains `All` or `797f4846-ba00-4fd7-ba43-dac1f8f63013` - Azure management ID\n* `users.includeUsers` contains `All`\n* `builtInControls` contains `mfa` or `authenticationStrength.requirementsSatisfied` contains `mfa`\n* `state` is `enabled`\n\n>**Note**  \nThis rule does not indicate a misconfiguration and is used as part of Control `wc-id-1234`."
   enabled                  = true
@@ -589,7 +573,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_acc6r2" {
   target_native_types      = ["ConditionalAccessPolicy"]
 }
 
-# __generated__ by Terraform from "ae99d1be-3ddd-4545-a7ed-f8542601aeab"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opexp8r1" {
   description              = "Entra ID Logs contain the history of sign-in activity, as well as an audit trail of the changes made in Azure AD for a particular tenant. They can provide crucial, tenant-wide insights, and are important in order to understand who did what, and when. \n\n>**Note**  \n>This rule should always pass on every Subscription since the logs are enabled by default and can't be disabled."
   enabled                  = true
@@ -604,7 +587,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_opexp8r1" {
   target_native_types      = ["Microsoft.AzureActiveDirectory/tenants"]
 }
 
-# __generated__ by Terraform from "fc191873-5e2b-413a-9c5e-389b0007a7b1"
 resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r2" {
   description              = "This rule checks whether the Backup Vault immutability settings are enabled.  \nThis rule fails if the field `immutabilitySettings.state` is not set to `Locked` or `Unlocked`.  \nImmutability ensures that once data is stored in the backup vault, it cannot be altered or deleted, even by those with privileged access.  \nThe immutability settings state can be set to `Unlocked`, meaning the vault has immutability enabled and doesn't allow operations that could result in loss of backups. However, the setting can be disabled.  \nIf the immutability settings state is set to `Locked`, it means that the vault has immutability enabled and it cannot be disabled."
   enabled                  = true
@@ -619,7 +601,6 @@ resource "wiz_cloud_configuration_rule" "ccn_884a_mpinfo9r2" {
   target_native_types      = ["Microsoft.DataProtection/backupVaults"]
 }
 
-# __generated__ by Terraform from "47a72232-eac2-4031-8a5e-d37c87ab8523"
 resource "wiz_cloud_configuration_rule" "ccn_884a_opmon2r1" {
   description              = "This rule checks whether the Azure Activity Logs are integrated with Azure Monitor.  \nThis rule fails when none of the Diagnostic Settings have `workspaceId` configured.  \nWhen deploying diagnostic settings with Log Analytics, Azure can stream subscription audit logs to a Log Analytics workspace to monitor subscription-level events.  \nIt is recommended to enable Azure Monitor integration to proactively monitor problems and issues with your Azure Activity Logs."
   enabled                  = true
