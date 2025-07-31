@@ -68,5 +68,5 @@ Ir a la consola de WIZ Reports  > Compliance Posture y buscar el marco recien cr
 
 **OPCIONAL 
 **
-Si por alguna razon se desea eliminar el marco normativo cargados solo es necesario ejecutar este comando: 
+Si por alguna razon se desea eliminar el marco normativo cargado solo es necesario ejecutar este comando: 
 terraform destroy
