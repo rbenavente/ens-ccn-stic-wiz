@@ -3,7 +3,7 @@ resource "wiz_security_framework" "ccn_442" {
   description                        = "The CCN-STIC Guidelines of the National Cryptologic Centre can establish specific  compliance  profiles  for  specific  entities  or  sectors,  which  will include  the list of measures and reinforcements that are applicable in each case, or the criteria for their determination"
   enabled                            = true
   maintain_rule_links_from_framework = null
-  name                               = "ENS CCN STIC 442 "
+  name                               = "ENS CCN STIC 442 - VMWARE "
   category {
     description = null
     name        = "MP. COM. 3 Authentication protection"
