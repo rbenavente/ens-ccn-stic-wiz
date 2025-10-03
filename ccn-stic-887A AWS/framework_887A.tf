@@ -654,7 +654,7 @@ resource "wiz_security_framework" "ens_ccn_stic_887a_framework" {
   }
 
   category {
-    name        = "MP. COM.4 - etwork Segregation"
+    name        = "MP. COM.4 - Network Segregation"
     description = "Measues of Protection for Communication."
    
     sub_category {
